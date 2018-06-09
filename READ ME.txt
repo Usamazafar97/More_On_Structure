@@ -1,0 +1,142 @@
+Q 1. Write a structure Student that has the following data members with private access modier: rollNo
+of type int, name of type char*, city of type string and phone of type string.
+
+Q 2. Write a member function that initializes all data members of Student Structure. You have to
+assign default values using Initialize() such that rollNo assigned with 0, name with dynamic allocation
+on heap of size 25, city to Null string and phone to Null string.
+void Initialize()
+
+Q 3. Write a member function Destroy() that deallocates all the memory allocated by Initialize()
+member function.
+void Destroy()
+
+Q 4. Write get and set member functions for each data member of Student structure. Name of get-
+ter and setter functions must be like getRollNo, getCity, setCity.
+You have to validate inputs, such that roll no should always be greater than 1001, name length should be
+greater than 4 letters, while city and phone can not be Null.
+bool setRollNo(int r)
+int getRollNo()
+bool setName(char* n)
+char* getName()
+bool setCity(string c)
+string getCity()
+bool setPhone(string c)
+string getPhone()
+
+Q 5. Write a global function SetStudentArray which takes two arguments, an array of type Student
+named arr and int size. You are required to assign values to each Student in arr using above dened setter
+functions.
+Note* setRollNo(int r) validates that rollNo of rst student should start from 1001 , second student rollNo
+would be 1002 up to so .
+void SetStudentArray(Student arr[], int size)
+
+Q 6. Write a global function GetStudentArray which takes two arguments, an array of type Student
+named arr and int size. You are required to get and display information of each Student in arr using
+above dened getter functions.
+void GetStudentArray(Student arr[], int size)
+
+Q 7. Write a program to dene a structure Employee that has the following data members empNo as
+int, basicPay as long, houseRent as long, medicalAllow as long, conveyanceAllow as long, netPay as long.
+
+Q 8. Compute the allowances based on basic pay and Allowances are computed as:
+ House rent is 45% of the basic pay.
+ Medical Allowance is 5% of the basic pay.
+ Conveyance allowance is 10% of the basic pay
+ Compute net pay
+You have to dene following member functions in Employee structure.
+void setBasicPay(int bp)
+int getBasicPay()
+void setEmpNo(int e)
+int getEmpNo()
+void calculateHouseRent()
+void calculateMedicalAllowance()
+void calculateConveyanceAllowance()
+void calculateNetPay()
+long gethouseRent()
+long getMedicalAllowance()
+long getConveyanceAllowance()
+long getNetPay()
+
+Q 9. Write a function named as Swap that takes two parameters of type Employee: emp1 and emp2. You
+are required to swap values of these parameters.
+*Note you are not allowed to copy complete object using assignment operator(=) rather you have to copy
+each data member separately into its corresponding data member.
+void Swap(Employee & emp1, Employee & emp2)
+
+Q 10. Dene a structure to represent a bank account named as BankAccount that includes the fol-
+lowing members:
+Private Data Members:
+ depositorName of type string.
+ accountNumber of type string
+ accountCat of type accountCategory (having data members, int Id, string Name)
+ Balance of type long
+Public member functions:
+ void Initilaize(string dp, string an, int acountTypeId, string accountTypeName, long balance)
+ To deposit an amount,
+bool depositAmount(long amountToDeposite)
+Hint: you have to validate that amount to deposit is non-negative.
+ To withdraw an amount after checking the balance.Return False if amount is less than withdrawl
+amount otherwise return True in case of successful transaction.
+bool withdrawAmount(long amountToWithdraw)
+ To get balance in given accountNum,
+long getAmount()
+
+Q 11. Your goal in this problem is to dene and use the structure(s) to store semester registration
+information for students at FAST. A semester registration consists of a semester code, and course registrations
+of between one and ve courses. A course registration consists of course code, course title, credit hours,
+section, and repeat count.
+Semester Registration
+Structure Members / Properties Properties Description
+Semester Code Stores the code of semester, like \Spring 2018"
+Course Registrations Stores courseCount courses registered in the semester
+Course Registration
+Structure Members / Properties Properties Description
+Course code Stores course code, like \CS 103"
+Course Title Stores course title, \Computer Programming"
+Credit Hours Stores credit hours of the course
+Section Stores section in which student is registered
+Repeat Count Stores repeat count of the course for the student
+After dening the structure(s), write the following global functions:
+1. GetCreditHoursCount: receives a semester registration as parameter and returns the total number of
+credit hours registered in it.
+2. FindCourseInSemesterRegistration: receives a semester registration, and a course code as parame-
+ters and returns true if the course is registered in the semester.
+
+Q 12. Your goal in this question is to write a program to manage a ShoppingList. For this you will need
+to create a structure ShoppingList that should be able to store all the details of shopping items with the
+following functionalities:
+Your ShoppingList have a xed capacity (10) of ShoppingItems. For each ShoppingItem you will store its
+name, its quantity and its price. A new ShoppingItem cannot be added to ShoppingList if the list is already
+full
+Whenever you buy a new item you will add it to the shoppinglist if the capacity is not full.
+Dene and use structures for the ShoppingList and ShoppingItems. Identify all the data members and
+member functions of these structures and write them. For instance, your structures must provide, apart from
+other functions, following interface (public) functions.
+ShoppingList
+Member Function Description
+AddItem Add a new shopping item to the shopping list.
+Print Should print the current list of added items to list
+TotalCost Should print the total cost of shopping list
+ShoppingItem
+Member Function Description
+InputItem Add details for the current item.
+Display Should display the information of item
+
+Q 13. Your goal in this question is to write a program to manage a Parking Garage. For this you will
+need to create a structure Parking Garage that should be able to simulate a basic parking garage with the
+following functionalities:
+Your garage should have a xed capacity (5 cars at most). For each car stationed at your garage you will
+record its entry time (current day hour in 24h format), its registration number and its allocated slot (each
+car can be allocated parking slot 1 to 5). A new car cannot be parked if the garage capacity is already full.
+Whenever a new car arrives at your garage you will add it to the garage if the capacity is not full. When
+a car leaves the garage you will ask the user current time (hour in 24 hour format) and charge him Rs. 20
+per hour, and declare the slot as available so that a new car can be parked here.
+Dene and use a structure (or class) for the Garage. Identify all the data members and member functions
+of this structure (or class) and write them. For instance, your class or structure must provide, apart from
+other functions, following interface (public) functions.
+Member Function Description
+Initialize Sets all the member to reasonable values.
+Print Should print the currently parked cars information and empty slots information
+IsFull Should return whether Garage is full or not.
+ParkCar Should add a new car to the Garage if it is not full.
+RemoveCar Should remove a car from a given parking slot.
